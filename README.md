@@ -1,25 +1,25 @@
-# API REST Transporte de Mercancías (Spring Boot + MongoDB)
+API REST Transporte de Mercancías (Spring Boot + MongoDB)
 
 API RESTful para la gestión del transporte de mercancías en una empresa logística.  
 Incluye autenticación y autorización con **Spring Security (JWT)**, persistencia en **MongoDB**, CRUD completo por entidad y consultas avanzadas.
 
 ---
 
-## Funcionalidades principales
+Funcionalidades principales
 
-- ✅ Autenticación con **login** y emisión de **JWT**
-- ✅ Autorización por roles:
+-  Autenticación con **login** y emisión de **JWT**
+-  Autorización por roles:
   - **EMPRESA**: gestiona mercancías y acepta/rechaza inscripciones
   - **CONDUCTOR**: gestiona camiones, se inscribe a transportes y reporta incidencias
-- ✅ Persistencia en **MongoDB**
-- ✅ CRUD completo (GET, POST, PUT, DELETE) para:
+-  Persistencia en **MongoDB**
+-  CRUD completo (GET, POST, PUT, DELETE) para:
   - Usuario
   - Camión
   - Mercancía
   - InscripciónTransporte
   - Incidencia
-- ✅ Consultas avanzadas (filtros por estado, conductor, fechas, origen/destino/peso, etc.)
-- ✅ Documentación con **Swagger**
+-  Consultas avanzadas (filtros por estado, conductor, fechas, origen/destino/peso, etc.)
+-  Documentación con **Swagger**
 
 ---
 
@@ -53,9 +53,6 @@ En `src/main/resources/application.properties`:
 - MongoDB (ejemplo):
   - `spring.data.mongodb.uri=mongodb://localhost:27017/transportebbdd`
 
-> Recomendación: no subir secretos a GitHub.  
-> Lo ideal es usar variables de entorno para el JWT secret.
-
 ---
 
 ## Ejecución del proyecto
@@ -66,8 +63,7 @@ chmod +x mvnw
 ./mvnw test
 Swagger
 
-Una vez la app esté en marcha, abre:
-
+Una vez la app esté en marcha, abrir:
 http://localhost:9005/swagger
-(si tu configuración expone Swagger en esa ruta)
+
 
